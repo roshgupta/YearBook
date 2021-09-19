@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <title>ECE YearBook | NITK'24</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="navbar__logo">
+        ECE YearBook
+      </div>
+      <div class="navbar__navigation">
+        <div class="navbar__links">
+          <a href="/">Home</a>
+          <a href="/">Profile</a>
+        </div>
+        <a class="navbar__button">LogOut</a>
+      </div>
+    </div>
+  </nav>
+  <main class="main">
+    <h1>Roshan Gupta !</h1>
+    <div class="container">
+      <div class="image">
+
+      </div>
+      <div class="content"></div>
+    </div>
+
+  </main>
+  <footer>
+    <div class="foot">
+      <div class="foot__left">
+        <div class="name">
+          Roshan Gupta
+        </div>
+        <div class="tag">
+          ECE Batch of 2024
+        </div>
+      </div>
+      <div class="foot__right">
+        <a href="/">View this project on GitHub</a>
+      </div>
+    </div>
+    <div class="copy-right">
+      CopyRight 2021 &copy; ECE Batch of 2024
+    </div>
+  </footer>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navbar = document.querySelector(".navbar");
+    const navbarLinks = document.querySelector(".navbar__links");
+    hamburger.addEventListener("click", () => {
+      if (hamburger.classList.contains("hamburger-open")) {
+        hamburger.classList.remove("hamburger-open");
+        navbar.classList.remove("no-border-radius");
+        navbarLinks.classList.remove("mobile_links");
+        document.body.classList.remove("no-scroll");
+      } else {
+        hamburger.classList.add("hamburger-open");
+        navbar.classList.add("no-border-radius");
+        navbarLinks.classList.add("mobile_links");
+        document.body.classList.add("no-scroll");
+      }
+
+    })
+  </script>
+</body>
+
+</html>
