@@ -8,6 +8,7 @@
   --white: #ffffff;
   --white-bg: #ffffff;
   --copy-right-bg: #03045e;
+  --box-shadow: 0px 0px 35px 8px rgba(2, 62, 138, 0.1);
 }
 * {
   box-sizing: border-box;
@@ -192,7 +193,7 @@ a {
   align-items: center;
   justify-content: center;
   background: var(--white-bg);
-  box-shadow: 0px 0px 35px 8px rgba(2, 62, 138, 0.1);
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   img {
     width: 60px;
@@ -248,4 +249,62 @@ a {
   align-items: center;
   background-color: var(--copy-right-bg);
   color: var(--white);
+}
+
+//styles for profile page, except for navabr and footer
+.profile_container {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  @media screen and (max-width: 900px) {
+    gap: 24px;
+  }
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    @media screen and (max-width: 1000px) {
+      width: 300px;
+      height: 300px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 400px;
+      height: 400px;
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .content {
+    height: 400px;
+    @media screen and (max-width: 800px) {
+      height: fit-content;
+    }
+    h2 {
+      font-size: 24px;
+      margin-top: 0px;
+      margin-bottom: 24px;
+      font-weight: 500;
+      @media screen and (max-width: 500px) {
+        font-size: 20px;
+      }
+    }
+    .description {
+      font-size: 18px;
+      line-height: 1.6;
+      @media screen and (max-width: 500px) {
+        font-size: 16px;
+      }
+    }
+  }
 }

@@ -8,6 +8,7 @@
   --white: #ffffff;
   --white-bg: #ffffff;
   --copy-right-bg: #03045e;
+  --box-shadow: 0px 0px 35px 8px rgba(2, 62, 138, 0.1);
 }
 
 * {
@@ -277,8 +278,8 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--white-bg);
-  -webkit-box-shadow: 0px 0px 35px 8px rgba(2, 62, 138, 0.1);
-          box-shadow: 0px 0px 35px 8px rgba(2, 62, 138, 0.1);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   border-radius: 10px;
 }
 
@@ -365,5 +366,104 @@ a {
           align-items: center;
   background-color: var(--copy-right-bg);
   color: var(--white);
+}
+
+.profile_container {
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 48px;
+}
+
+@media screen and (max-width: 900px) {
+  .profile_container {
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.profile_container img {
+  max-width: 400px;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+  .profile_container img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile_container img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile_container img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.profile_container .content {
+  height: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .profile_container .content {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.profile_container .content h2 {
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+  .profile_container .content h2 {
+    font-size: 20px;
+  }
+}
+
+.profile_container .content .description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 500px) {
+  .profile_container .content .description {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
