@@ -27,50 +27,34 @@
       <div class="navbar__navigation">
         <div class="navbar__links">
           <a href="/">Home</a>
-          <a href="./edit_your_profile.html">Profile</a>
+          <a href="/">Profile</a>
         </div>
         <a class="navbar__button">LogOut</a>
       </div>
     </div>
   </nav>
   <main class="main">
-    <h1>Explore about your classmates !</h1>
-    <h2>Available Profiles</h2>
-    <div class="cards-container">
+    <h1>Edit Your Profile !</h1>
 
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-      <a class="card" href="./others_profile.html">
-        <img src="./Rectangle 10.svg" alt="avatar">
-        <p>Random Kapoor</p>
-      </a>
-    </div>
+    <form action="" class="profile_container">
+      <div class="edit_image">
+        <label for="edit_avatar">
+          <div class="upload_icon">
+            <img src="./upload.png" alt="upload">
+          </div>
+          <img src="./image-place-holder.svg" alt="Image">
+        </label>
+        <input type="file" name="avatar" id="edit_avatar" accept="image/*">
+      </div>
+      <div class="edit_profile">
+        <label for="edit_name">Name </label>
+        <input type="text" name="name" id="edit_name"></input>
+        <label for="edit_description">Description</label>
+        <textarea name="description" id="edit_description" cols="30" rows="10"></textarea>
+        <input type="submit" value="Update" class="update_button">
+      </div>
+    </form>
+
   </main>
   <footer>
     <div class="foot">
