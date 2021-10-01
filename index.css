@@ -9,6 +9,9 @@
   --white-bg: #ffffff;
   --copy-right-bg: #03045e;
   --box-shadow: 0px 0px 35px 8px rgba(2, 62, 138, 0.1);
+  --input-bg: #c4c4c4;
+  --header-border: #0096c7;
+  --upload-image-hover-bg: #00000075;
 }
 
 * {
@@ -220,7 +223,7 @@ a {
 .main h1 {
   display: inline-block;
   font-size: 32px;
-  border-bottom: 5px solid #0096c7;
+  border-bottom: 5px solid var(--header-border);
   line-height: 48px;
   border-radius: 8px/12px;
   font-weight: 400;
@@ -478,7 +481,7 @@ a {
 }
 
 .edit_image > label:hover .upload_icon {
-  background-color: #00000075;
+  background-color: var(--upload-image-hover-bg);
 }
 
 .edit_image > label .upload_icon {
@@ -573,7 +576,7 @@ a {
   height: -moz-fit-content;
   height: fit-content;
   font-size: 20px;
-  background-color: #c4c4c4;
+  background-color: var(--input-bg);
   border: none;
 }
 
@@ -587,7 +590,7 @@ a {
   padding: 12px;
   font-size: 20px;
   width: 100%;
-  background-color: #c4c4c4;
+  background-color: var(--input-bg);
   border: none;
   resize: vertical;
 }
